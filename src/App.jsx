@@ -8,22 +8,22 @@ export default class App extends Component {
     this.state = {
       courses: [
         {
-          name: "DSA",
+          name: "c",
           price: 999,
           rating: 4.5,
-          img: "/OIP (1).webp"
+          img: "c.jpg"
         },
         {
-          name: "React",
+          name: "java",
           price: 799,
           rating: 4.7,
-          img: "/OIP (2).webp"
+          img: "java.jpg"
         },
         {
-          name: "Java",
+          name: "phython",
           price: 699,
           rating: 4.3,
-          img: "/OIP.webp"
+          img: "phython.jpg"
         }
       ]
     };

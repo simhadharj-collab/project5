@@ -1,24 +1,18 @@
-import React, { Component } from 'react'
+import React from "react";
+import "./CourseCard.css";
 
-class CourseCard extends Component {
-    render() {
-        const {data} = this.props;
-        const BASEURL = import.meta.env.BASE_URL;
-        return (
-            <div className='coursecard'>
-                <img src={BASEURL + data.img} alt='' />
-                <h3>{data.name}</h3>
-                <p>
-                    <span>Duration</span>
-                    <span>{data.duration}</span>
-                </p>
-                <p>
-                    <span>Course Fee</span>
-                    <span>{data.price}</span>
-                </p>
-            </div>
-        );
-    }
-}
+const CourseCard = ({ data }) => {
+  return (
+    <div className="course-card">
+      <img src={data.img} alt={data.name} />
+      <div className="course-content">
+        <h3>{data.name}</h3>
+        <p className="price">₹{data.price}</p>
+        <p className="rating">⭐ {data.rating}</p>
+        <button className="course-btn">Enroll Now</button>
+      </div>
+    </div>
+  );
+};
 
 export default CourseCard;
